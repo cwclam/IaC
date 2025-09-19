@@ -8,6 +8,8 @@ autoinstall:
   ssh:
     install-server: true
     allow-pw: false
+    authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBL/lmSzr1ox5U0OAhilLHXrHBQGgrhQYOJdgo+93a/i
   storage:
     layout:
       name: direct
