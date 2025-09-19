@@ -1,0 +1,18 @@
+#cloud-config
+autoinstall:
+  version: 1
+  identity:
+    hostname: node
+    username: cwclam
+    password: "$5$oE9MZ5B.4azE9TCS$qerVCYNJ0X.nVPCa/HTinPaDX7U8a5P5pj6g2SkfMe."
+  ssh:
+    install-server: true
+    allow-pw: false
+  storage:
+    layout:
+      name: direct
+  packages:
+    - curl
+    - vim
+  late-commands:
+    - curtin in-target --target=/target -- apt-get update
